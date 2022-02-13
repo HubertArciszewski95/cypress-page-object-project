@@ -1,4 +1,4 @@
-import userDetails from '../fixtures/user-details.json'
+import user from '../fixtures/user-existing.json'
 
 const baseApiUrl = Cypress.config('baseApiUrl');
 
@@ -8,8 +8,8 @@ Cypress.Commands.add('login', () => {
         url: `${baseApiUrl}/users/login`,
         body: {
             user: {
-                email: userDetails.email,
-                password: userDetails.password
+                email: user.email,
+                password: user.password
             }
         }
     }).then((resp) => {

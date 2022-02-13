@@ -1,8 +1,9 @@
 /// <reference types="Cypress" />
 
-import homePage from '../../../page-objects/home-page';
-import header from '../../../page-objects/components/header-component'
-import userDetails from '../../../fixtures/user-details.json'
+import homePage from '../../page-objects/home-page';
+import header from '../../page-objects/components/header-component'
+
+import user from '../../fixtures/user-existing.json'
 
 
 describe('Header', () => {
@@ -73,9 +74,9 @@ describe('Header', () => {
 
         it('Verify if profile header is displayed and match logged user', () => {
             header.elements.navLink()
-                .contains(userDetails.username)
+                .contains(user.username)
                 .should('be.visible')
-                .should('have.attr', 'href', `#/@${userDetails.username}`);
+                .should('have.attr', 'href', `#/@${user.username}`);
         });
     });
 

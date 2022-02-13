@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-import loginPage from '../../../page-objects/login-page'
-import userDetails from '../../../fixtures/user-details.json'
+import loginPage from '../../page-objects/login-page'
+import user from '../../fixtures/user-existing.json'
 
 describe('Login', () => {
 
@@ -29,22 +29,22 @@ describe('Login', () => {
     });
 
     it('Verify if validation message is displayed when password field is empty', () => {
-        loginPage.typeEmail(`${userDetails.email}{enter}`);
+        loginPage.typeEmail(`${user.email}{enter}`);
         loginPage.elements.errorMessage().should('contain', "password can't be blank");
     });
 
     it('Verify if validation message is displayed when email and password fields are invalid', () => {
-        loginPage.typeEmail(`${userDetails.email}`);
+        loginPage.typeEmail(`${user.email}`);
         loginPage.typePassword('invalid{enter}');
 
         loginPage.elements.errorMessage().should('contain', "email or password is invalid");
     });
 
     it('Verify if navigates to #/ on successful login', () => {
-        loginPage.typeEmail(userDetails.email);
-        loginPage.typePassword(`${userDetails.password}{enter}`);
+        loginPage.typeEmail(user.email);
+        loginPage.typePassword(`${user.password}{enter}`);
         // Same case as with register. We don't add assertions about home page. Because this is login spec.
         // All we care about is login page
-        cy.verifyUrl('#/')
+        cy.verifyUrl('#/');
     });
 });

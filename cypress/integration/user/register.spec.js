@@ -63,7 +63,7 @@ describe('Register', () => {
     });
     
     it('Verify if navigates to #/ on successful register', () => {
-        // userNotExisting should be delete after each run of this test. To make possible to register him again.
+        // userNotExisting should be deleted after each run of this test. To make possible to register him again.
         // DELETE API don't exist. So below is a example.
 
         // registerPage.typeUsername(userNotExisting.username);

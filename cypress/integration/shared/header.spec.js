@@ -13,28 +13,28 @@ describe('Header', () => {
             homePage.navigate();
         });
 
-        it('Verifi if welcome banner is displayed', () => {
+        it('should display welcome banner', () => {
             header.elements.welcomeBanner().contains('conduit');
             header.elements.welcomeBanner().contains('A place to share your knowledge.');
         });
 
         // Need to check visibility, because nav elements for logged user
         // exist in DOM even if user is not logged, but they are not visible
-        it('Verify if "Home" is displayed and links to #/', () => {
+        it('should display "Home" and links to #/', () => {
             header.elements.navLink()
                 .contains('Home')
                 .should('be.visible')
                 .should('have.attr', 'href', '#/');
         });
 
-        it('Verify if "Sign in" is displayed links to #/login', () => {
+        it('should display "Sign in" and links to #/login', () => {
             header.elements.navLink()
                 .contains('Sign in')
                 .should('be.visible')
                 .should('have.attr', 'href', '#/login');
         });
 
-        it('Verify if "Sign up" is displayed and links to #/register', () => {
+        it('should display "Sign up" and links to #/register', () => {
             header.elements.navLink()
                 .contains('Sign up')
                 .should('be.visible')
@@ -49,7 +49,7 @@ describe('Header', () => {
             homePage.navigate();
         });
 
-        it('Verify if "Home" is displayed and links to #/', () => {
+        it('should display "Home" and links to #/', () => {
             // eq(3) because first home navLink element is for not logged user.
             // Third element is home navLink for logged user.
             header.elements.navLink().eq(3)
@@ -58,21 +58,21 @@ describe('Header', () => {
                 .should('have.attr', 'href', '#/');
         });
 
-        it('Verify if "New Article" is displayed and links to #/editor/', () => {
+        it('should display "New Article" and links to #/editor/', () => {
             header.elements.navLink()
                 .contains('New Article')
                 .should('be.visible')
                 .should('have.attr', 'href', '#/editor/');
         });
 
-        it('Verify if "Settings" is displayed and links to #/settings', () => {
+        it('should display "Settings" and links to #/settings', () => {
             header.elements.navLink()
                 .contains('Settings')
                 .should('be.visible')
                 .should('have.attr', 'href', '#/settings');
         });
 
-        it('Verify if profile header is displayed and match logged user', () => {
+        it(`should display "${user.username}" profile username and links to author details`, () => {
             header.elements.navLink()
                 .contains(user.username)
                 .should('be.visible')

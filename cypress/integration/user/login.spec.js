@@ -9,7 +9,7 @@ describe('Login', () => {
         loginPage.navigate();
     });
 
-    it('Verify if "Sign in" title is displayed', () => {
+    it('should display "Sign in" title', () => {
         loginPage.elements.pageTitle().should('have.text', 'Sign in');
     });
 
@@ -18,29 +18,29 @@ describe('Login', () => {
     // We know activating the anchor link updates the browser url.
     // So this saves us from having login_spec knowing any detail about registration page.
     // That knowlede will and should only exist in registration_spec
-    it('Verify if "Need an account?" links to #/register', () => {
+    it('should display "Need an account?" and links to #/register', () => {
         loginPage.elements.registerTextLink().should('have.attr', 'href', '#/register')
     });
 
     // This test fails because of issue on the page
-    it('Verify if validation message is displayed when email field is empty', () => {
+    it('should display error when email field is empty', () => {
         loginPage.clickSignIn();
         loginPage.elements.errorMessage().should('contain', "email can't be blank");
     });
 
-    it('Verify if validation message is displayed when password field is empty', () => {
+    it('should display error when password field is empty', () => {
         loginPage.typeEmail(`${user.email}{enter}`);
         loginPage.elements.errorMessage().should('contain', "password can't be blank");
     });
 
-    it('Verify if validation message is displayed when email and password fields are invalid', () => {
+    it('should display error when email and password fields are invalid', () => {
         loginPage.typeEmail(`${user.email}`);
         loginPage.typePassword('invalid{enter}');
 
         loginPage.elements.errorMessage().should('contain', "email or password is invalid");
     });
 
-    it('Verify if navigates to #/ on successful login', () => {
+    it('should redirect to the home page after login', () => {
         loginPage.typeEmail(user.email);
         loginPage.typePassword(`${user.password}{enter}`);
         // Same case as with register. We don't add assertions about home page. Because this is login spec.

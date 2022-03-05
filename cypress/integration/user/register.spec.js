@@ -11,11 +11,6 @@ describe('Register', () => {
         registerPage.navigate();
     });
 
-    it("should redirect unauthenticated user to signin page", () => {
-        cy.visit("/personal");
-        cy.location("pathname").should("equal", "/signin");
-    });
-
     it('should display "Sign up" title', () => {
         registerPage.elements.pageTitle().should('have.text', 'Sign up');
     });
@@ -56,17 +51,17 @@ describe('Register', () => {
 
         registerPage.elements.errorMessage().should('contain', "username has already been taken");
     });
-    
+
     it('should display two errors when username and email are taken', () => {
         registerPage.typeUsername(userExisting.username);
         registerPage.typeEmail(userExisting.email);
         registerPage.typePassword(`${userNotExisting.password}{enter}`)
 
         registerPage.elements.errorMessage()
-        .should('contain', "email has already been taken")
-        .should('contain', "username has already been taken");
+            .should('contain', "email has already been taken")
+            .should('contain', "username has already been taken");
     });
-    
+
     it('should redirect to the home page after register', () => {
         // userNotExisting should be deleted after each run of this test. To make possible to register him again.
         // DELETE API don't exist. So below is a example.

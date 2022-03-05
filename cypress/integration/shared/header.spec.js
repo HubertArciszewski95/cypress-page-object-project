@@ -14,8 +14,10 @@ describe('Header', () => {
         });
 
         it('should display welcome banner', () => {
-            header.elements.welcomeBanner().contains('conduit');
-            header.elements.welcomeBanner().contains('A place to share your knowledge.');
+            header.elements.welcomeBanner()
+                .should('be.visible')
+                .and('contain', 'conduit')
+                .and('contain', 'A place to share your knowledge.');
         });
 
         // Need to check visibility, because nav elements for logged user

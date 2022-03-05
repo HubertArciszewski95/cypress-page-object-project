@@ -23,17 +23,24 @@ describe('Login', () => {
     });
 
     // This test fails because of issue on the page
-    it('should display error when email field is empty', () => {
+    it('should display error when email is empty', () => {
         loginPage.clickSignIn();
         loginPage.elements.errorMessage().should('contain', "email can't be blank");
     });
 
-    it('should display error when password field is empty', () => {
+    it('should display error when password is empty', () => {
         loginPage.typeEmail(`${user.email}{enter}`);
         loginPage.elements.errorMessage().should('contain', "password can't be blank");
     });
 
-    it('should display error when email and password fields are invalid', () => {
+    it('should display error for an invalid user', () => {
+        loginPage.typeEmail('invalid@email.com');
+        loginPage.typePassword('invalid{enter}');
+
+        loginPage.elements.errorMessage().should('contain', "email or password is invalid");
+    });
+
+    it('should display error for an invalid password for existing user', () => {
         loginPage.typeEmail(`${user.email}`);
         loginPage.typePassword('invalid{enter}');
 

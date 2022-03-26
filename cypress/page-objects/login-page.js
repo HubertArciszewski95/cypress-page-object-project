@@ -12,9 +12,7 @@ class LoginPage {
     }
     
     navigate() {
-        const url = '#/login';
-        cy.visit(url);
-        cy.verifyUrl(url);
+        cy.visit('#/login');
     }
 
     typeEmail(email) {

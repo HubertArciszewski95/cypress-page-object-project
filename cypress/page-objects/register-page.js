@@ -13,9 +13,7 @@ class RegisterPage {
     }
     
     navigate() {
-        const url = '#/register';
-        cy.visit(url);
-        cy.verifyUrl(url);
+        cy.visit('#/register');
     }
 
     typeUsername(username) {

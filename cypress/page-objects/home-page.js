@@ -3,13 +3,27 @@
 class homePage {
 
     elements = {
+        globalFeedTab: () => cy.get('.nav-link').contains('Global Feed'),
+        yourFeedTab: () => cy.get('.nav-link').contains('Your Feed'),
+        articleList: () => cy.get('article-list'),
+        likeButton: (index) => cy.get('favorite-btn').eq(index),
 
     }
     
     navigate() {
-        const url = '#/';
-        cy.visit(url);
-        cy.verifyUrl(url)
+        cy.visit('#/');
+    }
+
+    clickLikeButton(index) {
+        this.elements.likeButton(index).click();
+    }
+
+    clickReadMore(articleTitle) {
+        
+    }
+
+    clickArticleTitle(articleTitle) {
+
     }
 }
 export default new homePage();

@@ -1,13 +1,11 @@
 {
     "articles": [
         {
-            "slug": "Create-a-new-implementation-1",
-            "title": "Mock article title",
+            "slug": "Mock article title",
+            "title": "Mock article title 11",
             "description": "Mock article description",
             "body": "This is a mock article body.",
-            "tagList": [
-                "implementations"
-            ],
+            "tagList": [],
             "createdAt": "2021-11-24T12:11:08.212Z",
             "updatedAt": "2021-11-24T12:11:08.212Z",
             "favorited": false,
@@ -20,5 +18,5 @@
             }
         }
     ],
-    "articlesCount": 1
+    "articlesCount": 11
 }

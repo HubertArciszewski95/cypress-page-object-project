@@ -1,0 +1,175 @@
+{
+    "articles": [
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 1",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 2",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 3",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 4",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 5",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 6",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 7",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 8",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 9",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        },
+        {
+            "slug": "Mock article title",
+            "title": "Mock article title 10",
+            "description": "Mock article description",
+            "body": "This is a mock article body.",
+            "tagList": [],
+            "createdAt": "2021-11-24T12:11:08.212Z",
+            "updatedAt": "2021-11-24T12:11:08.212Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "MockUser",
+                "bio": null,
+                "image": "https://api.realworld.io/images/demo-avatar.png",
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 10
+}

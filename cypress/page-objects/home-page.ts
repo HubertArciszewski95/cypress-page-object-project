@@ -7,31 +7,31 @@ class homePage {
         yourFeedTab: () => cy.get('.nav-link').contains('Your Feed'),
         articlesLoadingMessage: () => cy.get('article-list').contains('Loading articles...'),
         noArticlesMessage: () => cy.get('article-list').contains('No articles are here... yet.'),
-        article: (index) => cy.get('[article=article] .article-preview').eq(index),
-        articleTitle: (title) => cy.get('[article=article] .article-preview h1').contains(title),
-        readMoreButton: (index) => cy.get('[article=article] .article-preview .preview-link').eq(index).contains('Read more...'),
-        likeButton: (index) => cy.get('favorite-btn').eq(index),
+        article: (index: number) => cy.get('[article=article] .article-preview').eq(index),
+        articleTitle: (title: string) => cy.get('[article=article] .article-preview h1').contains(title),
+        readMoreButton: (index: number) => cy.get('[article=article] .article-preview .preview-link').eq(index).contains('Read more...'),
+        likeButton: (index: number) => cy.get('favorite-btn').eq(index),
         pagination: () => cy.get('.pagination'),
-        page: (page) => cy.get('.pagination li').eq(page - 1),
+        page: (page: number) => cy.get('.pagination li').eq(page - 1),
     }
 
     navigate() {
         cy.visit('#/');
     }
 
-    clickLikeButton(index) {
+    clickLikeButton(index: number) {
         this.elements.likeButton(index).click();
     }
 
-    clickReadMoreButton(index) {
+    clickReadMoreButton(index: number) {
         this.elements.readMoreButton(index).click();
     }
 
-    clickArticleTitle(articleTitle) {
+    clickArticleTitle(articleTitle: string) {
         this.elements.articleTitle(articleTitle).click();
     }
 
-    selectPage(page) {
+    selectPage(page: number) {
         this.elements.page(page).find('.page-link').click();
     }
 }

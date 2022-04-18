@@ -15,11 +15,11 @@ class LoginPage {
         cy.visit('#/login');
     }
 
-    typeEmail(email) {
+    typeEmail(email: string) {
         this.elements.emailInput().type(email);
     }
 
-    typePassword(password) {
+    typePassword(password: string) {
         this.elements.passwordInput().type(password);
     }
 

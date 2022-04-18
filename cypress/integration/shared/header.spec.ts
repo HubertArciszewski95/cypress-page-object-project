@@ -49,6 +49,7 @@ describe('Header', () => {
         beforeEach(() => {
             cy.login();
             homePage.navigate();
+            cy.login()
         });
 
         it('should display "Home" and links to #/', () => {

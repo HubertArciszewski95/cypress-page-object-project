@@ -3,7 +3,7 @@
 
 class MockArticles {
 
-    getArticles(fixtureFile, statusCode = 200, offset = '0') {
+    getArticles(fixtureFile: string, statusCode: number = 200, offset: string = '0') {
         cy.intercept(
             {
                 method: 'GET',

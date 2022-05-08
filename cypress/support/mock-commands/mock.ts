@@ -1,5 +1,5 @@
-import MockArticles from '../mock-commands/articles'
-import MockTags from '../mock-commands/tags'
+import MockArticles from './articles'
+import MockTags from './tags'
 
 class Mock {
 

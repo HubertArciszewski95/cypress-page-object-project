@@ -1,11 +1,10 @@
+///<reference path="../global.d.ts" />
 import user from '../fixtures/user-existing.json'
-
-const baseApiUrl = Cypress.config('baseApiUrl');
 
 Cypress.Commands.add('login', () => {
     cy.request({
         method: 'POST',
-        url: `${baseApiUrl}/users/login`,
+        url: 'https://api.realworld.io/api/users/login',
         body: {
             user: {
                 email: user.email,

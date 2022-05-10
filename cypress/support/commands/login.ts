@@ -1,7 +1,16 @@
-///<reference path="../global.d.ts" />
-import user from '../fixtures/user-existing.json'
+import user from '../../fixtures/user-existing.json'
 
-Cypress.Commands.add('login', () => {
+declare namespace Cypress {
+    interface Chainable {
+        /**
+         * Custom command to login to the app by API.
+         * @example cy.login();
+         */
+        login: typeof login
+    }
+}
+
+const login = () => {
     cy.request({
         method: 'POST',
         url: 'https://api.realworld.io/api/users/login',
@@ -15,8 +24,6 @@ Cypress.Commands.add('login', () => {
         expect(res.status).to.eql(200);
         window.localStorage.setItem('jwtToken', res.body.user.token);
     })
-});
+};
 
-Cypress.Commands.add('verifyUrl', (url) => {
-    cy.hash().should('eq', url);
-})
+Cypress.Commands.addAll({ login });

@@ -1,4 +1,5 @@
-import './commands'
+import './commands/login.ts'
+import './commands/verifyUrl.ts'
 
 import addContext from 'mochawesome/addContext'
 

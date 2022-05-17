@@ -32,4 +32,4 @@ class RegisterPage {
         this.elements.signUpButton().click();
     }
 }
-export default new RegisterPage();
+export default RegisterPage;

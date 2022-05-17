@@ -27,4 +27,4 @@ class LoginPage {
         this.elements.signInButton().click();
     }
 }
-export default new LoginPage();
+export default LoginPage;

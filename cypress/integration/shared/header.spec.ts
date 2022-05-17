@@ -1,12 +1,15 @@
 /// <reference types="Cypress" />
 
-import homePage from '../../page-objects/home-page';
-import header from '../../page-objects/components/header-component'
+import HomePage from '../../page-objects/home-page';
+import Header from '../../page-objects/components/header'
 
 import user from '../../fixtures/user-existing.json'
 
 
 describe('Header', () => {
+    const homePage = new HomePage();
+    const header = new Header();
+
     describe('not logged user', () => {
 
         beforeEach(() => {
@@ -49,7 +52,6 @@ describe('Header', () => {
         beforeEach(() => {
             cy.login();
             homePage.navigate();
-            cy.login()
         });
 
         it('should display "Home" and links to #/', () => {

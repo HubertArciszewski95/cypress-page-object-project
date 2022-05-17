@@ -12,4 +12,4 @@ class Mock {
     }
 }
 
-export default new Mock();
+export default Mock;

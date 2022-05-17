@@ -1,9 +1,11 @@
 /// <reference types="Cypress" />
 
-import homePage from '../../page-objects/home-page';
-import mock from '../../support/mock-commands/mock'
+import HomePage from '../../page-objects/home-page';
+import Mock from '../../support/mock-commands/mock'
 
 describe('Article list', () => {
+    const homePage = new HomePage();
+    const mock = new Mock();
 
     describe('not logged user', () => {
 
@@ -41,7 +43,7 @@ describe('Article list', () => {
             cy.verifyUrl('#/article/Explore-implementations-1');
         });
 
-        it.only('should display message on 500 status code', () => {
+        it('should display message on 500 status code', () => {
             mock.articles.getArticles('articles/500-error.json', 500);
         });
 

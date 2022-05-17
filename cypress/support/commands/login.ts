@@ -1,16 +1,6 @@
 import user from '../../fixtures/user-existing.json'
 
-declare namespace Cypress {
-    interface Chainable {
-        /**
-         * Custom command to login to the app by API.
-         * @example cy.login();
-         */
-        login: typeof login
-    }
-}
-
-const login = () => {
+const login = (): void => {
     cy.request({
         method: 'POST',
         url: 'https://api.realworld.io/api/users/login',

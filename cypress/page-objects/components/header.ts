@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-class HeaderComponent {
+class Header {
 
     elements = {
         welcomeBanner: () => cy.get('.banner'),
@@ -9,4 +9,4 @@ class HeaderComponent {
 
 }
 
-export default new HeaderComponent();
+export default Header;

@@ -35,4 +35,4 @@ class homePage {
         this.elements.page(page).find('.page-link').click();
     }
 }
-export default new homePage();
+export default homePage;

@@ -1,11 +1,12 @@
 /// <reference types="Cypress" />
 
-import registerPage from '../../page-objects/register-page'
+import RegisterPage from '../../page-objects/register-page'
 
 import userExisting from '../../fixtures/user-existing.json'
 import userNotExisting from '../../fixtures/user-not-existing.json'
 
 describe('Register', () => {
+    const registerPage = new RegisterPage();
 
     beforeEach(() => {
         registerPage.navigate();

@@ -1,9 +1,10 @@
 /// <reference types="Cypress" />
 
-import loginPage from '../../page-objects/login-page'
+import LoginPage from '../../page-objects/login-page'
 import user from '../../fixtures/user-existing.json'
 
 describe('Login', () => {
+    const loginPage = new LoginPage();
 
     beforeEach(() => {
         loginPage.navigate();

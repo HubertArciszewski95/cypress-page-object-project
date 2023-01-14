@@ -1,6 +1,6 @@
 import user from '../../fixtures/user-existing.json'
 
-const login = (): void => {
+export const login = (): void => {
     cy.request({
         method: 'POST',
         url: 'https://api.realworld.io/api/users/login',
@@ -16,4 +16,4 @@ const login = (): void => {
     })
 };
 
-Cypress.Commands.addAll({ login });
+Cypress.Commands.add('login', login);

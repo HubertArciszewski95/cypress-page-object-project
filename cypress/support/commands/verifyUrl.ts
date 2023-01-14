@@ -1,6 +1,5 @@
-
-const verifyUrl = (url: string): void => {
+export const verifyUrl = (url: string): void => {
     cy.hash().should('eq', url);
 };
 
-Cypress.Commands.addAll({ verifyUrl });
+Cypress.Commands.add('verifyUrl', verifyUrl);
